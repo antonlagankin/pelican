@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script type="text/template" id="main">
+        <div class="main content">
+            <!--<%%=model.description%>-->
+            <%=link_to image_tag("Jf3EJEt8O3Q.jpg", alt: "photo"), "/"%>
+        </div>
+    </script>
+
+    <script type="text/template" id="news">
+        <div class="news content">
+            <%%var index=0;%>
+            <%%_.each(model, function(news) {%>
+                <%%if (index % 2 ==0) {%>
+                <div class="topic left">
+                    <div class="topic-content ">
+                        <%%=news.content%>
+                        <div class="date">
+                            <%%=news.date%>
+                        </div>
+                    </div>
+                </div>
+                <%%} else {%>
+                <div class="topic right">
+                    <div class="topic-content">
+                        <%%=news.content%>
+                        <div class="date">
+                            <%%=news.date%>
+                        </div>
+                    </div>
+                    <%%}%>
+                    <div class="tags">
+                        <!--<%%=news.tag%>-->
+                    </div>
+                </div>
+            </div>
+            <%%index++;%>
+            <%%});%>
+    </script>
+
+    <script type="text/template" id="about">
+        <div class="contact content">
+            <%%_.each(model, function(coach) {%>
+            <div class="coach-section">
+                <div class="coach-name">
+                    <%%=coach.name%>
+                </div>
+
+                <div class="coach-info-container">
+                    <div class="coach-photo">
+                        <img src="<%%=coach.photo%>"/>
+                    </div>
+                    <div class="coach-description">
+                        <%%=coach.description%>
+                    </div>
+                </div>
+            </div>
+            <%%});%>
+        </div>
+    </script>
+
+    <script type="text/template" id="projects">
+        <div class="projects">
+            Блоги,
+            Видеоматериалы,
+            Статьи,
+            Фотоотчеты
+        </div>
+    </script>
+</head>
+<body>
+
+<div class="top-panel">
+    <div class="central-container">
+        <div class="header">
+            <h1 class="header-logo">
+                <%= link_to image_tag("logo.png", alt: "logo"), '/ui/pelican/index' %>
+            </h1>
+        </div>
+
+
+        <div class="global-navigation">
+            <ul>
+                <li><%= image_tag("left_arrow.png") %></li>
+                <li><a href="#!/">Главная</a></li>
+                <li><a href="#!/about">О нас</a></li>
+                <li><a href="#!/news">Новости</a></li>
+                <li><a href="#!/sessions">Сессии</a></li>
+                <li><a href="#!/projects">Материалы</a></li>
+                <li><a href="#!/feedback">Отзывы</a></li>
+                <li><%= image_tag("right_arrow.png") %></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="central-panel">
+    <div class="central-container">
+        <div id="current_section" class="current_section">
+
+        </div>
+    </div>
+    <div class="right-panel">
+        <div>
+            <%=link_to '#' do%>
+                <figure>
+                    <%=image_tag('register.png', alt: 'register')%>
+                    <figcaption>Стать участником</figcaption>
+                </figure>
+            <%end%>
+        </div>
+        <div>
+            <%=link_to '#' do%>
+                <figure>
+                    <%=image_tag('organizer.png', alt: 'organizer')%>
+                    <figcaption>Стать организатором</figcaption>
+                </figure>
+            <%end%>
+        </div>
+        <div>
+            <%=link_to '#' do%>
+                <figure>
+                    <%=image_tag('contact.png', alt: 'contact')%>
+                    <figcaption>Связаться со специалистом</figcaption>
+                </figure>
+            <%end%>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

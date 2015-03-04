@@ -1,0 +1,117 @@
+body {
+  background-color: #237197;
+}
+
+.global-navigation li{
+  float: left;
+  line-height: 73px;
+  vertical-align: middle;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.global-navigation ul {
+  display: inline-block;
+  list-style-type: none;
+  font-size: 15pt;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+//.global-navigation a {
+//  color: orange;
+//  text-decoration: none;
+//}
+
+.global-navigation {
+//  background-color: red;
+  text-align: center;
+}
+
+.header img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  width: 100%;
+  color: orange;
+  text-decoration: none;
+}
+
+.central-container {
+  width: 950px;
+  margin: 0 auto;
+//  background-color: aliceblue;
+}
+
+.current_section {
+  text-align: center;
+}
+
+.topic-content {
+  text-align: left;
+  background-color: #ffffff;
+  border: 1px solid;
+  border-radius: 25px;
+  padding: 20px;
+  margin-top: 25px;
+  width: 80%;
+  display: inline-block;
+}
+
+.coach-info-container {
+  display: table;
+  vertical-align: middle;
+}
+
+.coach-description {
+  display: table-cell;
+  vertical-align: top;
+  text-align: left;
+  padding: 25px;
+}
+
+.coach-photo {
+  display: table-cell;
+  padding: 25px;
+}
+
+.coach-section {
+  display: table;
+}
+
+.coach-name {
+  text-align: left;
+  padding-left: 25px;
+  font-size: 18pt;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  color: orange;
+}
+
+.date {
+  text-align: right;
+  padding-right: 10px;
+  padding-top: 10px;
+}
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+.right-panel {
+  position: fixed;
+  right: 0;
+  bottom: 100px;
+  border-radius: 25px 0px 0px 25px;
+  border: 1px solid;
+  text-align: center;
+}
+
+.right-panel div {
+  padding: 1px;
+}

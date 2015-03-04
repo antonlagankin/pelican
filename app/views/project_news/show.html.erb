@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @project_news.date %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @project_news.content %>
+</p>
+
+<p>
+  <strong>Tags:</strong>
+  <%= @project_news.tags %>
+</p>
+
+<%= link_to 'Edit', edit_project_news_path(@project_news) %> |
+<%= link_to 'Back', project_news_index_path %>

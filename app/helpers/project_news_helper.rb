@@ -1,0 +1,2 @@
+module ProjectNewsHelper
+end
